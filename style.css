@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    font-variant: small-caps;
+}
+body{
+    background-color: #F1FFE7;
+}
+header{
+    background-color: #2A324B;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header > h1{
+    color: #F7C59F;
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    margin-top: 50px;
+    height: 500px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FFC2B4;
+    border-radius: 20px;
+    box-shadow: 4px 4px 5px rgb(0,0,0,0.40);
+}
+.input-container{
+    height: 140px;
+    width : 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 1.3rem;
+    border-radius: 20px;
+}
+.input-container > input[type="number"]{
+    border-radius: 10px;
+    height: 40px;
+    width: 80%;
+    border: none;
+    padding: 4px;
+    font-size: 1.4rem;
+    outline: none;
+    text-align: center;
+    box-shadow: 3px 3px 5px rgb(0,0,0,0.40);
+}
+.calc-btn{
+    margin-top: 10px;
+    width: 160px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2A324B;
+    color: white;
+    font-size: 1.6rem;
+    box-shadow:  2px 2px 8px rgb(0,0,0,0.40);
+}
+.display-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #FB8F67;
+    border-radius: 20px;
+    box-shadow:  2px 2px 5px rgb(0,0,0,0.40);
+}
+img{
+    height: 100px;
+}
+.from-to-container{
+    width: 40%;
+    height :200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.from-drpdwn,.to-drpdwn{
+   border: none;
+   border-radius: 6px;
+   
+   height: 30px;
+}
+.exchange-icon{
+    width: 15%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+.output{
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    background-color: #F1FFE7;
+    text-align: center;
+    box-shadow: 3px 3px 5px rgb(0,0,0,0.40);
+}
