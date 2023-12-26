@@ -2,7 +2,7 @@ const baseUrl = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/c
 
 const currDrpdown = document.querySelectorAll(".from-to-container select");
 let output = document.querySelector(".output");
-let calcBtn = document.querySelector(".calc-btn");
+let cvtBtn = document.querySelector(".cvt-btn");
 let amount = document.querySelector(".input-container input");
 let fromCurr = document.querySelector("#from select");
 let toCurr = document.querySelector("#to select");
@@ -33,9 +33,7 @@ const updateFlag = (element) => {
     img.src = newSrc;
 }
 
-// Calculate Button
-calcBtn.addEventListener("click", async (evt) => {
-    evt.preventDefault();
+const updateCurrency = async () => {
     let amountVal = amount.value;
     console.log(amount.value);
     if (amountVal === "" || amountVal < 1){
@@ -49,5 +47,14 @@ calcBtn.addEventListener("click", async (evt) => {
     let rate = data[toCurr.value.toLowerCase()];
     console.log(rate);
     let res = amountVal * rate;
-    output.innerText = `${amountVal} ${fromCurr.value} = ${Math.round(res)} ${toCurr.value}`
-})
+    output.innerText = `${amountVal} ${fromCurr.value} = ${Math.round(res)} ${toCurr.value}`;
+};
+
+// Convert Button
+cvtBtn.addEventListener("click", async (evt) => {
+    evt.preventDefault();
+    updateCurrency();
+});
+window.addEventListener("load",() => {
+    updateCurrency();
+}); 
